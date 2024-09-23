@@ -17,22 +17,37 @@ using namespace std;
 
 int main()
 {
-    const int NUM_SURVEYED = 16500;
+    //Declare
+    int NUM_SURVEYED;
 
-    float percent_1_or_more = .15,
+    //information
+    cout << "Enter the number of customers surveyed: ";
+    cin >> NUM_SURVEYED;
+
+    //Variables to hold the percentages
+    float percent_1_or_more = 0.15; //
+
+    //Percentage of customers purchasing 1 or more energy drinks per week
+    float percent_pref_citrus = 0.58; //
+
+    // Calculating totals 
+    float total_1_or_more = NUM_SURVEYED * percent_1_or_more; 
+    float grand_total = total_1_or_more * percent_pref_citrus;
+
         percent_pref_citrus = .58,
         total_1_or_more = NUM_SURVEYED * percent_1_or_more,
         grand_total = total_1_or_more * percent_pref_citrus;
 
-    cout << endl << endl;
-    cout << "The approximate # of customers in the survey who/n";
-    cout << "purchase on or moreenergy drinks per week is ";
-    cout << total_1_or_more << endl;
+    //output results
+        cout << endl << endl;
+        cout << "The approximate number of customers in the survey who\n";
+        cout << "Purchase one or more energy drinks per week is " << total_1_or_more << endl;
 
-    cout << "The approximate # of customers in the survey who/n";
-    cout << "prefer citrus-flavored energy drinks ";
-    cout << grand_total << endl;
-    cout << endl << endl;
+        cout << "The approximate number of customers inthe surey who\n";
+        cout << "prefer citrus-flavored energy drinks is " << grand_total << endl;
+
+        cout << endl << endl;
+  
     return 0;
 
 
